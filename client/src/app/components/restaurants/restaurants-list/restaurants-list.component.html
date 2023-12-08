@@ -1,0 +1,5 @@
+<div class="list-container">
+  <div *ngFor="let resto of restaurants">
+    <app-restaurant-item [restaurant]="resto" (refresh)="refresh.emit()"></app-restaurant-item>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div>
+  <h1>Détail du restaurant {{ restaurant?.nom }}</h1>
+  <img [src]="img" width="400"/>
+  <p>Adresse : {{ restaurant?.adresse }}</p>
+
+  <app-create-evaluation-form [restoId]="restaurant?.id" (refresh)="fetchRestaurant()"></app-create-evaluation-form>
+  <app-list-evaluations [evaluations]="restaurant?.evaluations"></app-list-evaluations>
+</div>

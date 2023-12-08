@@ -1,0 +1,11 @@
+<div appNoteCouleur="{{restaurant?.moyenneEvaluation}}">
+  <img [src]="img" width="400"/>
+  <p>
+    {{ restaurant?.nom }}
+  </p>
+  <p> {{ restaurant?.adresse}} </p>
+  <p *ngIf="restaurant?.moyenneEvaluation"> {{ restaurant?.moyenneEvaluation }} </p>
+  <p *ngIf="!restaurant?.moyenneEvaluation"> / </p>
+
+  <button (click)="routeToDetails()">Détails</button>
+</div>

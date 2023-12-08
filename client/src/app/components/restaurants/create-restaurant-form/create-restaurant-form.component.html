@@ -1,0 +1,56 @@
+<form #createRestoForm='ngForm' (ngSubmit)="create(createRestoForm)">
+  <label>Nom du restaurant</label>
+  <input
+    type="text"
+    placeholder="La belle vallée"
+    required="true"
+    name="name"
+    [(ngModel)]="formFields.nom">
+
+  <label>Adresse</label>
+  <input
+    type="text"
+    placeholder="11 route de la vallée"
+    required="false"
+    name="adresse"
+    [(ngModel)]="formFields.adresse">
+
+  <label>Tags</label>
+  <div>
+    <input
+      type="checkbox"
+      name="gastronomique"
+      value="GASTRONOMIQUE"
+      [(ngModel)]="formFields.gastronomique">
+    <label>Gastronomique</label>
+
+    <input
+      type="checkbox"
+      name="bistrot"
+      value="BISTROT"
+      [(ngModel)]="formFields.bistrot">
+    <label>Bistrot</label>
+
+    <input
+      type="checkbox"
+      name="bistronomique"
+      value="BISTRONOMIQUE"
+      [(ngModel)]="formFields.bistronomique">
+    <label>Bistronomique</label>
+    <input
+      type="checkbox"
+      name="brasserie"
+      value="BRASSERIE"
+      [(ngModel)]="formFields.brasserie">
+    <label>Brasserie</label>
+    <input
+      type="checkbox"
+      name="fastfood"
+      value="FASTFOOD"
+      [(ngModel)]="formFields.fastfood">
+    <label>FastFood</label>
+  </div>
+
+  <input label="Illustration" type="file" name="file" required="false" (change)="onFilesChanged($event)">
+  <button type="submit">Create</button>
+</form>

@@ -1,0 +1,27 @@
+<form #createEvalForm='ngForm' (ngSubmit)="create(createEvalForm)">
+  <label>Votre nom</label>
+  <input
+    type="text"
+    placeholder="Martin"
+    required="true"
+    name="name"
+    [(ngModel)]="formFields.nomEvaluateur">
+
+  <label>Commentaire</label>
+  <input
+    type="text"
+    placeholder="blabla"
+    required="false"
+    name="commentaire"
+    [(ngModel)]="formFields.commentaire">
+
+  <label>Note</label>
+  <input
+    type="number"
+    name="note"
+    value="note"
+    [(ngModel)]="formFields.note">
+
+  <input label="Illustration" type="file" multiple name="file" required="false" (change)="onFilesChanged($event)">
+  <button type="submit">Create</button>
+</form>

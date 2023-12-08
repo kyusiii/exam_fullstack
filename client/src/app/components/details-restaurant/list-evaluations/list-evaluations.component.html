@@ -1,0 +1,12 @@
+<div>
+  <h1>Commentaires : </h1>
+  <div *ngFor="let evaluation of evaluations">
+    <span>{{evaluation.nomEvaluateur}}</span>
+    <span>{{evaluation.commentaire}}</span>
+    <span>{{evaluation.note}}</span>
+
+    <div *ngFor="let photoId of evaluation?.photosIds">
+      <img url="" width="100">
+    </div>
+  </div>
+</div>
